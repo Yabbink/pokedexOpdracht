@@ -5,7 +5,7 @@
 }
 body{
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-image: url(afbeeldingen/pickachu.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,6 +31,7 @@ main{
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 10px;
+    overflow-y: scroll;
 }
 .sectionPokemon{
     width: 100%;
@@ -69,6 +70,7 @@ main .paginationButtons{
     background-color: yellow;
     color: white;
     border: 1px solid yellow;
+    border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
@@ -271,6 +273,7 @@ main .popup{
     background-color: yellow;
     color: white;
     border: 1px solid yellow;
+    border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
