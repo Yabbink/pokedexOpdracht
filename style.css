@@ -277,6 +277,9 @@ main .popup{
     margin-top: 10px;
 }
 @media screen and (max-width: 900px) {
+    header{
+        margin-top: 40px;
+    }
     main{
         width: 100%;
     }
