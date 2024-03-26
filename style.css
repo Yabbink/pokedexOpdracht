@@ -306,3 +306,35 @@ main .popup{
         margin-bottom: 50px;
     }
 }
+@media screen and (max-width:650px) {
+    .popup .detailsHead{
+        width: 25%;
+        height: 90%;
+        margin-top: 10px;
+    }
+    .detailsHead .details{
+        flex-direction: column;
+        justify-content: unset;
+        gap: 5px;
+    }
+    .details .types{
+        width: 100%;
+    }
+    .details .abilities{
+        width: 100%;
+    }
+    .details .stats{
+        width: 100%;
+    }
+    .details .stats p{
+        width: 100%;
+    }
+    .details .stats .white{
+        width: 80%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .popupButtons{
+        margin-top: 0px;
+    }
+}
