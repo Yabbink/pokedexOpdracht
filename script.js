@@ -393,6 +393,7 @@ $(document).ready(function(){
 
     $('#pokeSearch').on('click', function(){
       zoekPokemon()
+      $('#pokeField').val('')
     })
 
     getPokemonPagina(pagina)
