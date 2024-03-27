@@ -32,6 +32,28 @@ main{
     justify-content: space-around;
     margin-bottom: 10px;
 }
+main .sectionSearch{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.sectionSearch #pokeField{
+    width: 240px;
+    height: 40px;
+    padding-left: 10px;
+}
+.sectionSearch #pokeField:focus-visible{
+    outline: 0px solid white;
+}
+.sectionSearch #pokeSearch{
+    background-color: yellow;
+    border: 1px solid yellow;
+    color: white;
+    cursor: pointer; 
+    padding: 5px;   
+}
 .sectionPokemon{
     width: 100%;
     height: 100%;
@@ -285,6 +307,12 @@ main .popup{
         margin-top: 20px;
         width: 100%;
         overflow-y: scroll;
+    }
+    .sectionSearch #pokeField{
+        width: 40%;
+    }
+    main .sectionPokemon{
+        margin-top: 20px;
     }
     main .pokemonHead{
         gap: 20px;
