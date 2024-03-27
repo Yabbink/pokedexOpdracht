@@ -310,7 +310,10 @@ $(document).ready(function(){
 
   // on click functie voor het klikken op een Pokemon om de details weer te geven
   $(document).on('click', '.pokemon', function(){
-     id = $(this).index() + 1 + (pagina - 1) * aantalPokemons;
+     // de index waarde van de pokemon in de variabele id zetten
+     id = $(this).index() + 1
+     console.log("hallo")
+     console.log(id)
      if (isShiny == true) {
       isShiny = true;
      } else {
