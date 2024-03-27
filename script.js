@@ -49,7 +49,7 @@ $(document).ready(function(){
   }
 
   // Functie om de details van een specifieke Pokemon op te halen
-  function showPokemon(id, isShiny)
+  function showPokemonDetails(id, isShiny)
   {
     let pokeURL = "https://pokeapi.co/api/v2/pokemon/" + id;
     let html = '';
@@ -319,7 +319,7 @@ $(document).ready(function(){
      } else {
       isShiny = false;
      }
-     showPokemon(id, isShiny);
+     showPokemonDetails(id, isShiny);
   });
 
   // on click functie voor het bladeren naar de vorige Pokemon in de pop-up
@@ -327,7 +327,7 @@ $(document).ready(function(){
     if(id > 1)
     {
       id--;
-      showPokemon(id, isShiny);
+      showPokemonDetails(id, isShiny);
     }
     else
     {
@@ -340,7 +340,7 @@ $(document).ready(function(){
     if(id <= 1302)
     {
       id++;
-      showPokemon(id, isShiny);
+      showPokemonDetails(id, isShiny);
     }
     else
     {
