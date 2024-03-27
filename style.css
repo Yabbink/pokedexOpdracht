@@ -310,6 +310,9 @@ main .popup{
     }
 }
 @media screen and (max-width:650px) {
+    .pokemonHead{
+        margin-top: 20px;
+    }
     .popup .detailsHead{
         width: 25%;
         height: 90%;
