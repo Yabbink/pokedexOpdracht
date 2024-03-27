@@ -52,6 +52,7 @@ main .sectionSearch{
     border: 1px solid yellow;
     color: white;
     cursor: pointer; 
+    border-radius: 30px;
     padding: 5px;   
 }
 .sectionPokemon{
