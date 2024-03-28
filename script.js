@@ -57,21 +57,6 @@ $(document).ready(function(){
   {
     let pokeURL = "https://pokeapi.co/api/v2/pokemon/" + id;
 
-    pokemonDetails(id, pokeURL);
-  }
-
-  // Functie om een Pokemon op te zoeken
-  function zoekPokemon()
-  {
-    let input = $('#pokeField').val();
-    let pokeURL = "https://pokeapi.co/api/v2/pokemon/" + input;
-
-    pokemonDetails(input, pokeURL);
-  }
-
-  // Functie om details van een Pokemon weer te geven
-  function pokemonDetails(id, pokeURL)
-  {
     // AJAX-aanroep om de details van een Pokemon te krijgen die je opzoekt of als je er op klikt
     $.ajax({
       url: pokeURL,
@@ -267,6 +252,22 @@ $(document).ready(function(){
     });
   }
 
+  // Functie om een Pokemon op te zoeken
+  function zoekPokemon()
+  {
+    // de waarde eerst van een string naar een int converteren als het een string was en dan in de variabele inputId zetten
+    let inputId = parseInt($('#pokeField').val());
+    // controleren of de ingevoerde waarde groter of gelijk is aan 1 of kleiner of gelijk is aan 1302
+    if (inputId >= 1 && inputId <= 1302) {
+      // de waarde van inputId in de variabele id zetten 
+      id = inputId;
+      showPokemonDetails(id, isShiny);
+    } else {
+      console.log("Voer een geldig Pokemon ID in (1-1302).");
+    }
+  }
+
+  // de pokemons laten zien
   getPokemonPagina(pagina)
 
   // on click functie voor het zoeken naar een Pokemon
@@ -283,6 +284,7 @@ $(document).ready(function(){
   
   // on click functie voor het wijzigen van de shiny status
   $('.paginationButtons').on('click', '.shiny, .normal', function(){
+    // eerst checken of de shiny button is aangeklikt en daarop reageren door de tekst te veranderen en de variabele op het tegenovergestelde te zeggen
     if(isShiny == true) {
       tekst = "shiny";
       isShiny = false;
@@ -318,6 +320,7 @@ $(document).ready(function(){
      id = $(this).index() + 1 + (pagina - 1) * aantalPokemons
      console.log("hallo")
      console.log(id)
+     // checken of de shiny status actief is en hem dan ook zo houden en anders normaal maken
      if (isShiny == true) {
       isShiny = true;
      } else {
